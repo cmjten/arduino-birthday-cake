@@ -12,12 +12,21 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if (Serial.available()) {
+    // Re-lights the candle if data is received through
+    // serial port
+    Serial.read();
+    currentLedVal = HIGH;
+  }
+  
   digitalWrite(ledPin, currentLedVal);
   piezoVal = analogRead(piezoPin);
+  
   if (piezoVal > 2) {
     // Turns off the LEDs if the piezo detects a vibration
     currentLedVal = LOW;
   }
+  
   if (currentLedVal != previousLedVal && currentLedVal == LOW) {
     // If the sketch detects a state change from HIGH to LOW,
     // it sends a byte 5 through the serial port
