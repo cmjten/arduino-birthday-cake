@@ -29,9 +29,9 @@ public class DisplayPanel extends JPanel implements Observer, MouseListener {
 		
 		try {
 			// Gets the images required by the program
-			this.birthdayMessage = ImageIO.read(new File("images/cake.png"));
-			this.blowMessage = ImageIO.read(new File("images/blow_on_the_cake.png"));
-			this.noPortMessage = ImageIO.read(new File("images/no_port_detected.png"));
+			this.birthdayMessage = ImageIO.read(getClass().getResource("/cake.png"));
+			this.blowMessage = ImageIO.read(getClass().getResource("/blow_on_the_cake.png"));
+			this.noPortMessage = ImageIO.read(getClass().getResource("/no_port_detected.png"));
 		} 
 		catch (IOException e) {
 			// If at least one of the images are not found, sets all instance
