@@ -33,9 +33,10 @@ public class DisplayPanel extends JPanel implements Observer, MouseListener {
 			this.blowMessage = ImageIO.read(getClass().getResource("/blow_on_the_cake.png"));
 			this.noPortMessage = ImageIO.read(getClass().getResource("/no_port_detected.png"));
 		} 
-		catch (IOException e) {
-			// If at least one of the images are not found, sets all instance
-			// variables for the images to null
+		catch (Exception e) {
+			// If something goes wrong with the images (ex. at least one of the images are not 
+			// found), sets all instance variables for the images to null and displays text 
+			// instead
 			this.birthdayMessage = null;
 			this.blowMessage = null;
 			this.noPortMessage = null;
@@ -106,7 +107,7 @@ public class DisplayPanel extends JPanel implements Observer, MouseListener {
 	public void displayText(Graphics2D g2d) {
 		if (this.displayController.getSerialPort() == null) {
 			// No port detected
-			g2d.drawString("No port detected", 5, 360);
+			g2d.drawString("No serial port detected", 5, 360);
 		}
 		else if (!this.displayController.getIsLit()) {
 			// After blowing the candles, displays the birthday message and the 
