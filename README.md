@@ -5,7 +5,9 @@ LEDs and a piezo. When the user blows on the piezo, it detects a vibration and t
 It also sends a signal to the computer through the serial port.
 
 The Java program receives this signal and displays the birthday message. When the birthday message is clicked, it 
-resets the program and sends a signal to the Arduino Uno to relight the candles.
+resets the program and sends a signal to the Arduino Uno to relight the LEDs.
+
+###[Demo Video](https://vid.me/ySh1)
 
 ### Components
 - Arduino Uno
