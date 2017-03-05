@@ -1,8 +1,8 @@
-const int piezoPin = A0;
-const int ledPin = 2;
+const byte piezoPin = A0;
+const byte ledPin = 2;
 int piezoVal = 0;
-int currentLedVal = HIGH;
-int previousLedVal = HIGH;
+byte currentLedVal = HIGH;
+byte previousLedVal = HIGH;
 
 void setup() {
   // put your setup code here, to run once:
@@ -27,7 +27,8 @@ void loop() {
     currentLedVal = LOW;
   }
   
-  if (currentLedVal != previousLedVal && currentLedVal == LOW) {
+  if (currentLedVal != previousLedVal && 
+    currentLedVal == LOW) {
     // If the sketch detects a state change from HIGH to LOW,
     // it sends a byte 5 through the serial port
     Serial.write(5);
