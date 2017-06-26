@@ -9,7 +9,7 @@ resets the program and sends a signal to the Arduino Uno to relight the LEDs.
 
 The Processing sketch is an alternative to the Java program. It does the exact same thing, but no third party libraries are required.
 
-###[Demo Video](https://vid.me/ySh1)
+### [Demo Video](https://vid.me/ySh1)
 
 ### Components
 - Arduino Uno
@@ -23,8 +23,8 @@ The Processing sketch is an alternative to the Java program. It does the exact s
 
 ### Images
 
-<img src=https://github.com/cmjten/arduino-birthday-cake/blob/master/setup_images/arduino_birthday_cake_setup_lit.png width=600/>
+<img src=./setup_images/arduino_birthday_cake_setup_lit.png width=600/>
 
-<img src=https://github.com/cmjten/arduino-birthday-cake/blob/master/setup_images/arduino_birthday_cake_setup_unlit.png width=600/>
+<img src=./setup_images/arduino_birthday_cake_setup_unlit.png width=600/>
 
-<img src=https://github.com/cmjten/arduino-birthday-cake/blob/master/setup_images/arduino_birthday_cake_breadboard.png width=600/>
+<img src=./setup_images/arduino_birthday_cake_breadboard.png width=600/>
